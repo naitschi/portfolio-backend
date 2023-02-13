@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend Server for SES Development Project",
+  "main": "index.js",
+  "author": "sebastian.schieck91@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "1.20.1",
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "mongoose": "6.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  }
+}
