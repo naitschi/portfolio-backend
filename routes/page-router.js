@@ -1,18 +1,11 @@
-const Page = require("../models/page");
+const express = require("express");
 
-createPage = (req, res) => {
-  const body = req.body;
+const PageCtrl = require("../controllers/page-controller");
 
-  if (!body) {
-    return res.status(400).json({
-      success: false,
-      error: "You must provide a Page",
-    });
-  }
+const router = express.Router();
 
-  const page = new Page(body);
-
-  if (!page) {
-    return res.status(400).json({ success: false, error: err });
-  }
-};
+router.post("/page", PageCtrl.createPage);
+router.put("/page/:id", PageCtrl.updatePage);
+router.delete("/page/:id", PageCtrl.deletePage);
+router.get("/page/:id", PageCtrl.getPageById);
+router.get("/pages", PageCtrl.getPages);
